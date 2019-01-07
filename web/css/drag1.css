@@ -1,0 +1,89 @@
+* 
+{ 
+    margin: 0; 
+     
+} 
+ 
+ 
+#container 
+{ 
+    display:none; 
+} 
+ 
+ 
+#blurryBG 
+{ 
+    position: fixed; 
+   
+    right: 0; 
+    margin: auto; 
+    height: 100%; 
+    width: 100%; 
+    margin: auto; 
+    background: url("http://preview.ibb.co/bSVuym/bg.jpg"); 
+    background-size: cover; 
+    filter: blur(50px); 
+    -webkit-filter: blur(35px); 
+} 
+ 
+#draggingObject 
+{ 
+    position: fixed; 
+    margin: auto; 
+    height: 120px; 
+    width: 120px; 
+    transition: left linear 50ms; 
+    cursor: pointer; 
+    z-index: 1; 
+ 
+} 
+
+#draggingObject1
+{ 
+    position: fixed; 
+    margin: auto; 
+    height: 120px; 
+    width: 120px; 
+    transition: left linear 50ms; 
+    cursor: pointer; 
+    z-index: 1; 
+ 
+} 
+ 
+ 
+#drop 
+{ 
+    height: 160px; 
+    width: 160px; 
+    position: fixed; 
+    top: 5px; 
+    left: 0; 
+    right:0; 
+    margin:auto; 
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 43%; 
+    transition: border-radius linear 200ms; 
+    text-align: center; 
+    color: #fff; 
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif; 
+     
+} 
+ 
+#dropIcon 
+{ 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    margin: auto; 
+} 
+ 
+ 
+#dropTxt 
+{ 
+    font-size: 25px; 
+    line-height: 150px; 
+    display: none; 
+}

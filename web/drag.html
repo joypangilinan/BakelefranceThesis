@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Droppable - Default functionality</title>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  .draggable { width: 50px; height: 50px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;}
+  #droppable { width: 250px; height: 250px; padding: 0.5em; float: left; margin: 10px; background-color: yellow; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<!-- <div class="draggable" class="ui-widget-content">
+  <p>Drag me to my target</p>
+</div>
+
+<div class="draggable" class="ui-widget-content">
+  <p>Drag me to my target</p>
+</div> -->
+ <img class="draggable" class="ui-widget-content" src="images/homemenu-bg.jpg" /> 
+ <img class="draggable" class="ui-widget-content" src="images/bakelefrance-logo.png" /> 
+<img class="draggable" class="ui-widget-content" src="images/iteam.png" /> 
+
+<div id="droppable" class="ui-widget-header">
+  <p>Drop here</p>
+</div>
+ 
+ 
+</body>
+</html>
