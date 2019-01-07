@@ -157,6 +157,10 @@ a.article, a.article:hover {
 .wishdisplay{
     display: none;
 }
+
+.payment{
+    display: none;
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */

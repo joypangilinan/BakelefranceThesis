@@ -11,6 +11,10 @@ html, body{
     width: 100%;
   	/*background:#ff8db2;*/
 }
+h3{
+	font-family: Rythmus;
+	color: #f4ab2b;
+}
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -138,7 +142,7 @@ body a{
 	width: 70%;
 	margin: 0 0 0 0;
 	float: left;
-	margin-left: 33%;
+	margin-left: 15%;
 	position:relative;
 }
 .head-nav ul li{
@@ -1172,10 +1176,6 @@ i.white-cart1{
 .personalinfo{
 	padding: 2rem;
 }
-.personalinfo h3{
-	font-family: Rythmus;
-	color: #f4ab2b;
-}
 
 .infoads {
 	  background-color: #ebdcbf;
@@ -1921,7 +1921,7 @@ ul.tags_links li a:hover{
 	margin-left: 0.5%;
 }
 .head-nav ul{
-	margin-left: 30%;
+	margin-left: 15%;
 
 }
 .head-nav ul  li a {
@@ -1972,10 +1972,10 @@ i.twt {
 
 .top-header-right{
 	float:right;
-	width:45%;
+
 }
 .head-nav ul{
-	margin-left: 25%;
+	margin-left: 12%;
 	width: 80%;
 }
 
@@ -2095,9 +2095,6 @@ h4.title {
 .top-header-right ul {
 	padding: 0;
 
-}
-.top-header-right {
-	width: 52%;
 }
 .top-header-center {
 	width: 18%;
@@ -2436,9 +2433,7 @@ h4.tag_head {
 .top-header-center p {
 	font-size: 0.875em;
 }
-.top-header-right {
-	width: 58%;
-}
+
 .top-header-center {
 	width: 21%;
 	margin-top:0.2em;
@@ -2563,7 +2558,7 @@ h4.tag_head {
 	width: 27%;
 }
 .top-header-right ul li {
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 .top-header {
 	padding: 6px;
