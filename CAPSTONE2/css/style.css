@@ -1,0 +1,216 @@
+
+.top-header{
+	background:#5a0f16;
+	padding-right: 15px;
+	padding-left: 32px;
+}
+
+.top-header-right ul li{
+	padding-left: 2em;
+}
+.cart label{
+	color:#f9e256;
+	font-weight:100;
+	margin-left:1em;
+	margin-top: 0.4em;
+}
+.top-header-left ul li a:hover,.top-header-left ul li.active a{
+	color:#f9e256;
+}
+.socl-icons {
+    padding-top: 5px;
+}
+.top-header .socl-icons ul {
+    float: right;
+}
+.top-header .socl-icons li {
+    float: left;
+    list-style: outside none none;
+    margin-right: 5px;
+}
+.top-header .socl-icons li a {
+    display: inline-block;
+    border-radius: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #000;
+    color: #fff;
+    margin: 0 0px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    color: #fff;
+}
+/* FOOTER */
+.footer{
+	background:#fbe0e9;
+	padding:4em 0em 0em;
+}
+.footer h4 {
+	font-size: 1em;
+	font-weight: 700;
+	color: black;
+	text-transform: uppercase;
+	padding: 0 0 0.5em 0;
+	margin: 0 0 0.5em;
+}
+.footer h5{
+	font-size:1.3em;
+	font-weight:600;
+	color:#FC6391;
+	text-transform:uppercase;
+	padding:0 0 0.5em 0;
+	margin:0 0 0.5em;
+}
+.location p{
+	font-size:1em;
+	font-weight:400;
+	color:#7F7D7E;
+	
+}
+.customer a{
+	font-size:1em;
+	font-weight:400;
+	color:#7F7D7E;
+	padding:0 0 0.5em 0;
+	margin:0 0 0.5em;
+	line-height:1.5em;
+	display: block;
+}
+.customer h6{
+	font-size:1em;
+	font-weight:400;
+	color:#7F7D7E;
+	text-transform:uppercase;
+	padding:0 0 0.5em 0;
+	margin:0 0 0.5em;
+}
+.social, .customer, .location, .sign{
+	text-align:center;
+}
+
+.face-b{
+	margin:1em 0em; 
+	position:relative;
+
+}
+.sign form input[type="text"] {
+	padding: 0.5em 0.5em;
+	margin-bottom: 2%;
+	width: 100%;
+	background: white;
+	color:#7F7D7E;
+	font-size: 14px;
+	outline: none;
+	font-weight: 400;
+	text-indent: 10px;
+	border: none;
+	border-radius: 10px; 
+	
+}
+.footer-top{
+	padding:1em 0em 2em;
+	border-bottom:1px solid #EDD2DB;
+}
+.footer-bottom a {
+	color: #f84f86;
+}
+.footer-bottom p {
+	color: #7D7F7C;
+	font-size: 1em;
+	margin:1em 0em;
+}
+
+.icons a img{
+	width: 15%;
+	height: 15%;
+}
+
+i.fb {
+	width: 32px;
+	height: 32px;
+	display: inline;
+	background: url(../images/social-icons-2.png) no-repeat 0px 0px;
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	left: 130px;
+}
+i.fb:hover {
+	opacity:0.7;
+}
+i.twt {
+	width: 32px;
+	height: 32px;
+	display: inline;
+	background: url(../images/social-icons-2.png) no-repeat -36px 0px;
+	position: absolute;
+	bottom: 0px;
+	top: 142px;
+	left: 180px;
+}
+i.twt:hover{
+	opacity:0.7;
+}
+/*--responsive design--*/
+@media (max-width:768px){
+    .location {
+        margin: 0em 0em 2em;
+    }
+    .customer {
+        margin: 0 0 2em;
+    }
+    .social {
+        margin:0em 0em 3em;
+    }
+    i.fb {
+        left: 354px;
+    }
+    i.twt {
+        left: 369px;
+    }
+    .footer-bottom p {
+        font-size: 1em;
+    }
+    .footer {
+        padding: 1em 0em 0em;
+    }
+    .footer-bottom p {
+        font-size: 0.875em;
+        text-align: center;
+    }
+    .footer h4 {
+        font-size: 0.9em;
+    }
+    .location p {
+        font-size: 0.875em;
+    }
+    .customer h6 {
+        font-size: 0.875em;
+    }
+    
+    .icons a img{
+        width: 8%;
+        height: 8%;
+    }
+}
+/* Register Button */
+.regbtn{
+	background:#f9e256;
+	color: #FFF;
+	font-size: 1.2em;
+	padding: 0.6em 2em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	text-transform: uppercase;
+	border:none;
+	outline:none;
+	margin-top: 1em;
+}
+.regbtn:hover {
+	background:#5A0F16;
+}
