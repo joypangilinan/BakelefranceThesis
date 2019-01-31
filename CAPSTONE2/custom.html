@@ -36,7 +36,11 @@
         }
      
         </style>
-       
+         <!-- filestart -->
+          <link rel="icon" type="image/vnd.microsoft.icon"  href="./demo/img/favicon.ico" />
+          <link rel="Stylesheet" type="text/css" href="./demo/demo.css" />
+          <script type="text/javascript" src="./lib/jquery.1.10.2.min.js"></script>
+          <!-- fileend -->
 	</head>
 
 <body>
@@ -78,7 +82,7 @@
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav ">
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Products<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -95,10 +99,10 @@
                         <li><a href="#">Promos</a></li>
                     </ul>
                 </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <li class="active"><a href="custom.html">Custom</a></li>
-                <li><a href="#">Faq</a></li>
+                <li><a href="faq.html">Faq</a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <div class="input-group">
@@ -111,10 +115,152 @@
         </div>
         </nav>
     
-        <!-- CONTENT -->
+    <!-- CONTENT -->
+    <div id="content">
+   <!--  <h1 id="plugin-name">wPaint.js</h1> -->
 
+    <div class="content-box">
+      <!-- jQuery UI -->
+      <script type="text/javascript" src="./lib/jquery.ui.core.1.10.3.min.js"></script>
+      <script type="text/javascript" src="./lib/jquery.ui.widget.1.10.3.min.js"></script>
+      <script type="text/javascript" src="./lib/jquery.ui.mouse.1.10.3.min.js"></script>
+      <script type="text/javascript" src="./lib/jquery.ui.draggable.1.10.3.min.js"></script>
+      
+      <!-- wColorPicker -->
+      <link rel="Stylesheet" type="text/css" href="./lib/wColorPicker.min.css" />
+      <script type="text/javascript" src="./lib/wColorPicker.min.js"></script>
 
+      <!-- wPaint -->
+      <link rel="Stylesheet" type="text/css" href="./paintoutsidefile/wPaint.min.css" />
+      <script type="text/javascript" src="./paintoutsidefile/wPaint.min.js"></script>
+      <script type="text/javascript" src="./plugins/main/wPaint.menu.main.min.js"></script>
+      <script type="text/javascript" src="./plugins/text/wPaint.menu.text.min.js"></script>
+      <script type="text/javascript" src="./plugins/shapes/wPaint.menu.main.shapes.min.js"></script>
+      <script type="text/javascript" src="./plugins/file/wPaint.menu.main.file.min.js"></script>
 
+      <div id="wPaint" style="position:relative; width:500px; height:200px; background-color:#7a7a7a; margin:70px auto 20px auto;"></div>
 
-        </body>
-        </html>
+      <center style="margin-bottom: 50px;">
+        <input type="button" value="toggle menu" onclick="console.log($('#wPaint').wPaint('menuOrientation')); $('#wPaint').wPaint('menuOrientation', $('#wPaint').wPaint('menuOrientation') === 'vertical' ? 'horizontal' : 'vertical');"/>
+      </center>
+
+      <center id="wPaint-img"></center>
+
+      <script type="text/javascript">
+        var images = [
+          '/test/uploads/wPaint.png',
+        ];
+
+        function saveImg(image) {
+          var _this = this;
+
+          $.ajax({
+            type: 'POST',
+            url: '/test/upload.php',
+            data: {image: image},
+            success: function (resp) {
+
+              // internal function for displaying status messages in the canvas
+              _this._displayStatus('Image saved successfully');
+
+              // doesn't have to be json, can be anything
+              // returned from server after upload as long
+              // as it contains the path to the image url
+              // or a base64 encoded png, either will work
+              resp = $.parseJSON(resp);
+
+              // update images array / object or whatever
+              // is being used to keep track of the images
+              // can store path or base64 here (but path is better since it's much smaller)
+              images.push(resp.img);
+
+              // do something with the image
+              $('#wPaint-img').attr('src', image);
+            }
+          });
+        }
+
+        function loadImgBg () {
+
+          // internal function for displaying background images modal
+          // where images is an array of images (base64 or url path)
+          // NOTE: that if you can't see the bg image changing it's probably
+          // becasue the foregroud image is not transparent.
+          this._showFileModal('bg', images);
+        }
+
+        function loadImgFg () {
+
+          // internal function for displaying foreground images modal
+          // where images is an array of images (base64 or url path)
+          this._showFileModal('fg', images);
+        }
+
+        // init wPaint
+        $('#wPaint').wPaint({
+          menuOffsetLeft: -35,
+          menuOffsetTop: -50,
+          saveImg: saveImg,
+          loadImgBg: loadImgBg,
+          loadImgFg: loadImgFg
+        });
+      </script>
+    </div>
+  </div>
+
+<!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="col-md-3 location">
+                    <h4>about us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod. </p>
+                    <h4>contact us</h4>
+                    <p>Phone: 09234941149</p>
+                    <p>Telephone: 044-309-0812</p>
+                    <p>Email: bakelefrancebocaue@gmail.com</p>
+                    <p>Address: Ground Floor. Psalm 23 Bldg., McArthur Highway, Bunlo, 3018 Bocaue, Bulacan</p>
+                </div>
+                <div class="col-md-3 customer">
+                    <h4>links</h4>
+                    <a>Home</a>
+                    <a>Products</a>
+                    <a>About</a>
+                    <a>Contact</a>
+                    <a>Custom</a>
+                    <a>Faq</a>
+                    
+                </div>
+                <div class="col-md-3 social">
+                    <h4>hours</h4>
+                    <p>Weekdays 8 a.m.-7 p.m.</p>
+                    <p>Saturday 8 a.m.-7 p.m.</p>
+                    <p>Sunday 8 a.m.-5 p.m.</p>
+                    <p>Call for Holidays Hours.</p>
+
+                </div>
+                <div class="col-md-3 sign">
+                    <h4>get out for new letter</h4> 
+                    <p> Sign up with your email to get fresh updates.
+                        <form>
+                        <input type="text" class="text" value="YOUR EMAIL" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address ';}">
+                        </form>
+                        <br>
+                        <div class="icons">
+                            <a href="#"><img src="images/icons/icon2.png" ></a>
+                            <a href="#"><img src="images/icons/icon3.png" ></a>
+                            <a href="#"><img src="images/icons/icon5.png" ></a>
+                            <a href="#"><img src="images/icons/icon1.png" ></a>
+                        </div>
+                        
+                </div>
+                    <div class="clearfix"> </div>
+            </div>
+            <div class="footer-bottom">
+                <center><p>Copyright 2019 Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a>-- Modified By <a href="#">Bake Le France Custom Cakes</a> All Rights Reserved.</p></center>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
